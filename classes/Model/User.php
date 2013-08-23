@@ -1,10 +1,10 @@
 <?php
 /**
- *  ${CARET}Describe
+ * Model an application user
  *
- * @author    Andrew Coulton <andrew@ingenerator.com>
- * @copyright 2013 Creative Carbon Scotland
- * @licence   proprietary
+ * @author     Andrew Coulton <andrew@ingenerator.com>
+ * @copyright  2013 inGenerator Ltd
+ * @licence    BSD
  */
 namespace Model;
 
