@@ -33,6 +33,8 @@ class AuthenticationSpec extends ObjectBehavior
 		$this->beConstructedWith($request, $response);
 
 		$this->warden($warden);
+		$warden->current_user()->willReturn(NULL);
+		
 		$this->view_factory($view_factory);
 	}
 
@@ -57,6 +59,19 @@ class AuthenticationSpec extends ObjectBehavior
 		$this->shouldSendViewResponse('\View\Authentication\Login', $view_factory, $view, $response);
 
 		$this->action_login();
+	}
+
+	/**
+	 * @param \Request    $request
+	 * @param \Warden     $warden
+	 * @param \Model\User $user
+	 */
+	public function its_login_action_redirects_to_homepage_if_user_already_authed($request, $warden, $user)
+	{
+		$warden->current_user()->willReturn($user);
+
+		$this->shouldThrow('\HTTP_Exception_Redirect')
+		->during('action_login');
 	}
 
 	/**

@@ -86,13 +86,20 @@ class Authentication extends \Controller {
 	 */
 	public function action_login()
 	{
+		// If the user is already authenticated, go straight to login
+		$warden = $this->warden();
+
+		if ($warden->current_user())
+		{
+			$this->redirect('/', 302);
+		}
+
 		$errors = array();
 		$post_data = array('email' => NULL, 'password' => NULL);
 
 		if ($this->request->method() === \Request::POST)
 		{
 			$post_data = $this->request->post();
-			$warden = $this->warden();
 
 			$validation = \Validation::factory($post_data)
 				->rule('email', 'not_empty')
