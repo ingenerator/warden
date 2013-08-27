@@ -15,7 +15,7 @@
     "require": {
         "php":                          ">=5.3.3",
         "composer/installers":          "~1.0",
-        "kohana/core":                  "dev-ingenerator-master",
+        "kohana/core":                  "3.3.*",
         "ingenerator/kohana-doctrine2": "dev-master",
         "ircmaxell/password-compat":    "1.0.*@stable",
         "ingenerator/kohana-view":      "dev-develop"
@@ -26,8 +26,9 @@
         "ingenerator/koharness":        "dev-master"
     },
     "repositories": [
-        {"type": "vcs", "url": "https://github.com/ingenerator/kohana-core"}
+        {"type": "vcs", "url": "https://github.com/kohana/core"}
     ],
+    "minimum-stability": "dev",
     "config": {
         "preferred-install": "dist"
     }
