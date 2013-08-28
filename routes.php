@@ -8,7 +8,7 @@
  * @licence    BSD
  */
 
-Route::set('authentication', '<action>', array('action' => 'login'))
+Route::set('authentication', '<action>', array('action' => 'login|logout'))
    ->defaults(array(
 		'controller' => 'Authentication'
    ));

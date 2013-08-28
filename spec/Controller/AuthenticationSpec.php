@@ -160,6 +160,35 @@ class AuthenticationSpec extends ObjectBehavior
 	}
 
 	/**
+	 * @param \Warden     $warden
+	 * @param \Model\User $user
+	 */
+	public function its_logout_action_logs_out_active_user_and_redirects_to_login($warden, $user)
+	{
+		$warden->current_user()->willReturn($user);
+
+		$warden->logout()->shouldBeCalled();
+
+		$this->shouldThrow('\HTTP_Exception_Redirect')
+			->during('action_logout');
+	}
+
+	/**
+	 * @param \Warden     $warden
+	 */
+	public function its_logout_action_redirects_anonymous_user_to_login($warden)
+	{
+		$warden->current_user()->willReturn(NULL);
+
+		$warden->logout()->shouldNotBeCalled();
+
+		$this->shouldThrow('\HTTP_Exception_Redirect')
+			->during('action_logout');
+	}
+
+
+
+	/**
 	 * Helper for configuring expectations that a particular view class will be created and rendered to the response
 	 * body. Set the collaborator expectations on each individual spec and pass them to this method to wire them up
 	 * together.

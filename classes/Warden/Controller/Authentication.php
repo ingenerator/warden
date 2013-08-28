@@ -136,4 +136,19 @@ class Authentication extends \Controller {
 		$this->response->body($view->render());
 	}
 
+	/**
+	 * Log out the active user (if any) and redirect to the login page
+	 *
+	 * @return void
+	 */
+	public function action_logout()
+	{
+		$warden = $this->warden();
+		if ($warden->current_user())
+		{
+			$warden->logout();
+		}
+		$this->redirect('/login', 302);
+	}
+
 }
