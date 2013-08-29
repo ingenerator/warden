@@ -115,7 +115,7 @@ class Warden {
 	 * Return the current user entity, reloading it from the database as required. If the user ID does not match a valid
 	 * user model then an exception is thrown and the session user id is cleared.
 	 *
-	 * @return Model\User
+	 * @return \Model\User
 	 * @throws \UnexpectedValueException
 	 */
 	public function current_user()
