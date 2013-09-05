@@ -25,9 +25,6 @@
         "phpspec/phpspec":              "2.0.*@dev",
         "ingenerator/koharness":        "dev-master"
     },
-    "repositories": [
-        {"type": "vcs", "url": "https://github.com/kohana/core"}
-    ],
     "minimum-stability": "dev",
     "config": {
         "preferred-install": "dist"
