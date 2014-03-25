@@ -7,6 +7,7 @@
  * @licence    BSD
  */
 namespace Warden\Controller;
+use Warden\Model\User;
 use Warden\Exception\Authentication\InvalidPasswordException;
 use Warden\Exception\Authentication\UnknownUserException;
 use Warden\Warden;
@@ -91,7 +92,7 @@ class Authentication extends \Controller {
 
 		if ($warden->current_user())
 		{
-			$this->redirect('/', 302);
+            $this->redirect_after_login($warden->current_user());
 		}
 
 		$errors = array();
@@ -111,7 +112,7 @@ class Authentication extends \Controller {
 				{
 					$user = $this->warden()->authenticate($post_data['email'], $post_data['password']);
 					$warden->login($user);
-					$this->redirect('/', 302);
+                    $this->redirect_after_login($user);
 				}
 				catch (UnknownUserException $e)
 				{
@@ -150,5 +151,17 @@ class Authentication extends \Controller {
 		}
 		$this->redirect('/login', 302);
 	}
+
+    /**
+     * Redirect the user following successful login
+     *
+     * @param User  $user
+     *
+     * @return void
+     */
+    public function redirect_after_login(User $user)
+    {
+        $this->redirect('/', 302);
+    }
 
 }
