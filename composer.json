@@ -18,7 +18,7 @@
         "kohana/core":                  "3.3.*",
         "ingenerator/kohana-doctrine2": "dev-master",
         "ircmaxell/password-compat":    "1.0.*@stable",
-        "ingenerator/kohana-view":      "dev-develop"
+        "ingenerator/kohana-view":      "^1.0"
 
     },
     "require-dev": {
