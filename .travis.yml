@@ -25,4 +25,4 @@ before_script:
   - vendor/bin/koharness
 
 # Run the specs against the koharnessed application in /tmp/koharness
-script: vendor/bin/phpspec
+script: vendor/bin/phpspec run --no-interaction
