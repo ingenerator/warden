@@ -16,7 +16,7 @@
         "php":                          ">=5.3.3",
         "composer/installers":          "~1.0",
         "kohana/core":                  "3.3.*",
-        "ingenerator/kohana-doctrine2": "dev-master",
+        "ingenerator/kohana-doctrine2": "dev-master||^0.2",
         "ircmaxell/password-compat":    "1.0.*@stable",
         "ingenerator/kohana-view":      "^1.0"
 
