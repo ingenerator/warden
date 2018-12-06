@@ -5,6 +5,7 @@
     "keywords":     ["web", "auth", "acl", "kohana"],
     "homepage":     "http://github.com/ingenerator/warden",
     "license":      "BSD-3-Clause",
+    "abandoned":    "ingenerator/warden-core",
     "authors": [
         {
             "name":      "Andrew Coulton",
