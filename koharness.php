@@ -6,10 +6,11 @@
  * @copyright 2013 inGenerator Ltd
  * @link      https://github.com/ingenerator/koharness
  */
-return array(
-	'modules' => array(
-		'kohana-doctrine2' => __DIR__.'/modules/kohana-doctrine2',
-		'kohana-view'      => __DIR__.'/modules/kohana-view',
-		'warden'           => __DIR__
-  )
-);
+return [
+    'modules' => [
+        'kohana-doctrine2' => __DIR__.'/vendor/ingenerator/kohana-doctrine2',
+        'kohana-view'      => __DIR__.'/modules/kohana-view',
+        'warden'           => __DIR__,
+    ],
+    'syspath' => __DIR__.'/vendor/ingenerator/kohana-core',
+];

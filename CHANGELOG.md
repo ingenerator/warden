@@ -1,7 +1,7 @@
 ### Unreleased
 
 * Support kohana-doctrine 1.0 (no changes required apart from adding ingen private package repo for dependency
-  availability)
+  availability and tweaking tests for ingenerator/kohana-core)
 * Drop php5 support / testing
 
 ### v2.0.0 (2018-12-06)

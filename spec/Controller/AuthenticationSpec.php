@@ -30,8 +30,7 @@ class AuthenticationSpec extends ObjectBehavior
 	 */
 	public function let($request, $response, $warden, $view_factory)
 	{
-		$this->beConstructedWith($request, $response);
-
+        $this->setRequestContext($request, $response);
 		$this->warden($warden);
 		$warden->current_user()->willReturn(NULL);
 		
