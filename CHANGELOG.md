@@ -1,5 +1,7 @@
 ### Unreleased
 
+* Drop php5 support / testing
+
 ### v2.0.0 (2018-12-06)
 
 * Advertise that this warden version is abandoned in favour of the warden-core family of packages
