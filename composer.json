@@ -13,13 +13,18 @@
             "homepage":  "http://ingenerator.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php-packages.ingenerator.com"
+        }
+    ],
     "require": {
         "php":                          "^7.0",
         "composer/installers":          "~1.0",
         "kohana/core":                  "3.3.*",
         "ingenerator/kohana-doctrine2": "^1.0",
         "ingenerator/kohana-view":      "^1.0"
-
     },
     "require-dev": {
         "phpspec/phpspec":              "^2.0",
