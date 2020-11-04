@@ -1,5 +1,9 @@
 ### Unreleased
 
+### v2.2.0 (2020-11-04)
+
+* Drop requirement for Hasher algorithm to be int.
+
 ### v2.1.0 (2020-05-28)
 
 * Support kohana-doctrine 1.0 (no changes required apart from adding ingen private package repo for dependency
