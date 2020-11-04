@@ -86,10 +86,4 @@ class HasherSpec extends ObjectBehavior
 			->duringConfigure(array('algorithm' => \PASSWORD_DEFAULT));
 	}
 
-	public function it_rejects_configuration_with_algorithm_that_is_not_integer()
-	{
-		$this->shouldThrow('\InvalidArgumentException')
-			->duringConfigure(array('algorithm' => 'PASSWORD_DEFAULT', 'options' => array('cost' => 12)));
-	}
-
 }

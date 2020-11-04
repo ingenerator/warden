@@ -80,13 +80,6 @@ class Hasher
 		    throw new \InvalidArgumentException("\\Warden\\Hasher::configure requires an options option");
 	    }
 
-	    if ( ! is_int($config['algorithm']))
-	    {
-		    throw new \InvalidArgumentException(
-			    "The algorithm option passed to \\Warden\\Hasher::configure must be an integer"
-		    );
-	    }
-
 	    $this->algorithm = $config['algorithm'];
 	    $this->options = $config['options'];
     }
